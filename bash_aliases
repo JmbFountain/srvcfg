@@ -56,3 +56,6 @@ alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
 
 #Open metasploit console form anywhere on the system
 #alias msfcli='/opt/metasploit-framework/bin/msfconsole'
+
+# Stuff for Editors
+# vim: syntax=bash

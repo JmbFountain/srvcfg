@@ -35,3 +35,7 @@ deb-src http://deb.debian.org/debian/ unstable main non-free contrib
 # entries were disabled at the end of the installation process.
 # For information about how to configure apt package sources,
 # see the sources.list(5) manual.
+
+# Stuff for Editors
+# vim: syntax=aptconf
+# vim: filetype=aptconf

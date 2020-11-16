@@ -128,8 +128,6 @@ export LIBVIRT_DEFAULT_URI="qemu:///system"
 export PATH="$HOME/scripts:$PATH"
 
 
-export http_proxy="http://10.132.200.5:3128"
-export https_proxy="http://10.132.200.5:3128"
-export no_proxy="localhost,127.0.0.0/8,10.0.0.0/8,kliniken.intern"
+
 
 
