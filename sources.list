@@ -1,0 +1,37 @@
+# 
+
+# deb cdrom:[Debian GNU/Linux 10.3.0 _Buster_ - Unofficial amd64 DVD Binary-1 with firmware 20200208-12:08]/ buster contrib main non-free
+
+# deb cdrom:[Debian GNU/Linux 10.3.0 _Buster_ - Unofficial amd64 DVD Binary-1 with firmware 20200208-12:08]/ buster contrib main non-free
+
+deb http://deb.debian.org/debian/ unstable main non-free contrib
+deb-src http://deb.debian.org/debian/ unstable main non-free contrib
+
+#deb http://deb.debian.org/debian/ unstable-backports main non-free contrib
+#deb-src http://deb.debian.org/debian/ unstable-backports main non-free contrib
+
+
+#deb http://security.debian.org/debian-security unstable-security main contrib non-free
+#deb-src http://security.debian.org/debian-security unstable-security main contrib non-free
+
+# unstable-updates
+#deb http://deb.debian.org/debian/ unstable-updates main contrib non-free
+#deb-src http://deb.debian.org/debian/ unstable-updates main contrib non-free
+
+#testing packages
+#deb  http://ftp.de.debian.org/debian/ testing main contrib non-free
+#deb-src http://ftp.de.debian.org/debian/ testing main contrib non-free
+
+#experimental packages
+#deb  http://ftp.de.debian.org/debian/ experimental main contrib non-free
+#deb-src  http://ftp.de.debian.org/debian/ experimental main contrib non-free
+
+#Kali Sources (use with care!)
+#deb [ trusted=yes ] http://http.kali.org/kali kali-rolling main non-free contrib
+#deb-src [ trusted=yes ] http://http.kali.org/kali kali-rolling main non-free contrib
+
+# This system was installed using small removable media
+# (e.g. netinst, live or single CD). The matching "deb cdrom"
+# entries were disabled at the end of the installation process.
+# For information about how to configure apt package sources,
+# see the sources.list(5) manual.

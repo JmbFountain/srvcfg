@@ -1,0 +1,24 @@
+#!/bin/bash
+
+DISTRO="\e[91m\e[1m$(lsb_release -si) $(lsb_release -sr) $(lsb_release -sc)\e[0m"
+KERNEL="$(uname) $(uname -r)"
+TIME="$(uptime -p) "
+SOCKETS=$(lscpu | grep 'Socket(s)' | uniq | cut -d":" -f2 | tr -d " ")
+CORES=$(grep 'cpu cores' /proc/cpuinfo | uniq | cut -d":" -f2 | tr -d " ")
+CPUMODEL=$(grep 'model name' /proc/cpuinfo | uniq | cut -d":" -f2)
+THREADS=$(lscpu | grep 'Thread' | uniq | cut -d":" -f2 | tr -d " ")
+ALLTHREADS=$(lscpu | grep 'CPU(s)' | uniq | head -1 |cut -d":" -f2 | tr -d " ")
+USEDMEM=$(free -h | awk '/^Mem:/{print $3}')
+ALLMEM=$(free -h | awk '/^Mem:/{print $2}')
+
+echo -e "\e[1mServer der SLK-Kliniken Heilbronn GmbH\e[0m"
+echo -e "Logged in as \e[32m$USER""\e[39m@\e[92m$(hostname)\e[0m, $TIME"
+echo -e "$DISTRO, $KERNEL"
+echo -e "$SOCKETS Sockets x $CORES Cores x $THREADS Threads (\e[1m\e[91m$ALLTHREADS total\e[0m) $CPUMODEL"
+echo -e "\e[34m$USEDMEM \e[0mof \e[91m$ALLMEM\e[0m RAM used"
+
+echo -e "----------------------------------------------------------------------------------"
+echo "Currently logged in:"
+echo " $(who)"
+echo -e "----------------------------------------------------------------------------------"
+echo -e "Date:\e[37m$(date)\e[0m"

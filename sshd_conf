@@ -1,0 +1,43 @@
+#	$OpenBSD: sshd_config,v 1.103 2018/04/09 20:41:22 tj Exp $
+AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+# Ciphers and keying
+Ciphers aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com
+HostKey /etc/ssh/ssh_host_rsa_key
+HostKey /etc/ssh/ssh_host_ed25519_key
+KexAlgorithms diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org
+
+# Logging
+SyslogFacility AUTHPRIV
+LogLevel INFO
+
+# Authentication:
+MACs hmac-sha2-256,hmac-sha2-512,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com
+LoginGraceTime 2m
+PermitRootLogin prohibit-password
+#StrictModes yes
+MaxAuthTries 3
+MaxSessions 100
+PubkeyAuthentication yes
+#AuthorizedKeysFile	.ssh/authorized_keys
+
+# To disable tunneled clear text passwords, change to no here!
+#PasswordAuthentication yes
+#PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+UsePAM yes
+AllowAgentForwarding yes
+AllowTcpForwarding yes
+X11Forwarding yes
+X11DisplayOffset 10
+X11UseLocalhost yes
+PermitTTY yes
+PrintMotd yes
+PrintLastLog no
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+Subsystem	sftp	/usr/lib/openssh/sftp-server
