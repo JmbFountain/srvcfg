@@ -4,8 +4,8 @@
 
 # deb cdrom:[Debian GNU/Linux 10.3.0 _Buster_ - Unofficial amd64 DVD Binary-1 with firmware 20200208-12:08]/ buster contrib main non-free
 
-deb http://deb.debian.org/debian/ unstable main non-free contrib
-deb-src http://deb.debian.org/debian/ unstable main non-free contrib
+deb http://deb.debian.org/debian/ stable main non-free contrib
+deb-src http://deb.debian.org/debian/ stable main non-free contrib
 
 #deb http://deb.debian.org/debian/ unstable-backports main non-free contrib
 #deb-src http://deb.debian.org/debian/ unstable-backports main non-free contrib

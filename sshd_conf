@@ -41,3 +41,8 @@ PrintLastLog no
 AcceptEnv LANG LC_*
 
 Subsystem	sftp	/usr/lib/openssh/sftp-server
+
+
+# Stuff for Editors
+# vim: syntax=sshdconf
+# vim: filetype=sshdconf

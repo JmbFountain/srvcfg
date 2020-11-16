@@ -98,8 +98,8 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f /etc/bash_aliases ]; then
-    . /etc/bash_aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/bash_aliases
 fi
 #fancy bash prompt
 #if [ -f ~/.bash_fancy ]; then
@@ -117,11 +117,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-PATH="/home/administrator/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/administrator/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/administrator/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/administrator/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/administrator/perl5"; export PERL_MM_OPT;
+PATH="/home/johannes/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/johannes/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/johannes/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/johannes/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/johannes/perl5"; export PERL_MM_OPT;
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 
 
@@ -131,3 +131,5 @@ export PATH="$HOME/scripts:$PATH"
 
 
 
+# Stuff for Editors
+# vim: syntax=bash
