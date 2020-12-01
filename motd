@@ -1,5 +1,6 @@
 #!/bin/bash
 
+USER=$(whoami)
 DISTRO="\e[91m\e[1m$(lsb_release -si) $(lsb_release -sr) $(lsb_release -sc)\e[0m"
 KERNEL="$(uname) $(uname -r)"
 TIME="$(uptime -p) "

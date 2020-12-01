@@ -7,3 +7,4 @@ cp -f ./sources.list /etc/apt/
 cp -f ./motd /etc/update-motd.d/motd
 cp -f ./sshd_conf /etc/ssh/
 chmod +x /etc/update-motd.d/motd
+mv /etc/motd /etc/motd-
