@@ -1,19 +1,21 @@
-#!/bin/bash
 #Colouring
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
+#alias ls = 'ls --color=auto'
+#alias grep = 'grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 #more functions
 alias ..='cd ..'
-alias ll='ls -alF'
-alias yeet='rm'
-#alias diff='colordiff'
+alias ll='ls -alFh'
+alias yeet='rm -rf'
+alias simp='gimp'
+alias diff='colordiff'
 alias mount='mount |column -t'
+alias df='df -h'
 #alias update='~/scripts/update.sh'
 alias wget='wget -c'
 #alias date='date -I'
 alias utc='date -u'
+#alias work='sudo openvpn ~/Downloads/jmb@188.73.125.52.ovpn'
 ## a quick way to get out of current directory ##
 alias ..='cd ..'
 alias ...='cd ../../../'
@@ -32,8 +34,8 @@ alias nowdate='date +"%d-%m-%Y"'
 alias please='sudo'
 alias svi='sudo vi'
 
-#cat to bat
-#alias cat='batcat'
+#batcat to bat
+alias bat='batcat'
 
 ## pass options to free ##
 alias meminfo='free -m -l -t'
@@ -56,7 +58,7 @@ alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
 #alias kali='ssh -X kali'
 
 #Open metasploit console form anywhere on the system
-#alias msfcli='/opt/metasploit-framework/bin/msfconsole'
+alias msfcli='/opt/metasploit-framework/bin/msfconsole'
 
-# Stuff for Editors
-# vim: syntax=bash
+#Update PIP packages
+alias pip-update="pip3 list -o --format columns|  cut -d' ' -f1|xargs -n1 pip install -U"

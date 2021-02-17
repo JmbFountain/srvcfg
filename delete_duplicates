@@ -1,0 +1,3 @@
+#!/bin/sh
+# uses fdupes to remove all duplicate files in directory
+fdupes ./ -d -N

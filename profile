@@ -117,11 +117,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-PATH="/home/johannes/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/johannes/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/johannes/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/johannes/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/johannes/perl5"; export PERL_MM_OPT;
+PATH="/root/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/root/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/root/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/root/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/root/perl5"; export PERL_MM_OPT;
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 
 
